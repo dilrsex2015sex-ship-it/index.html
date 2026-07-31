@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Weather Dashboard</h1>
+
+    <form id="search-form" class="search">
+      <input id="q" type="search" placeholder="Enter city or place (e.g. London)" aria-label="Search location" required />
+      <button type="submit">Search</button>
+      <button id="use-geo" type="button" title="Use my location">📍</button>
+    </form>
+
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section id="current" class="card hidden">
+      <h2 id="location-name"></h2>
+      <div class="current-row">
+        <div class="big">
+          <div id="weather-emoji" class="emoji">☀️</div>
+          <div id="temperature" class="temp">--°C</div>
+        </div>
+        <div class="details">
+          <div id="condition">—</div>
+          <div id="wind">Wind: —</div>
+          <div id="time">Updated: —</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="forecast" class="hidden">
+      <h3>7‑day forecast</h3>
+      <div id="forecast-cards" class="forecast-grid"></div>
+    </section>
+
+    <footer>
+      <small>Data by <a href="https://open-meteo.com" target="_blank" rel="noopener">Open‑Meteo</a></small>
+    </footer>
+  </main>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
